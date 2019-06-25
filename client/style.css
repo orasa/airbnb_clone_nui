@@ -5,6 +5,12 @@ body {
 	font-family: Helvetica, sans-serif;
 }
 
+#header {
+  color: blue;
+  font-size:  30px;
+  text-align: center;
+}
+
 #wrap {
 	background-color: white;
 	padding: 50px;
@@ -23,7 +29,7 @@ h1 {
 	grid-template-columns: 200px auto;
 }
 
-#products {
+#properties {
 	padding-top: 90px;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -31,14 +37,14 @@ h1 {
 	grid-row-gap: 40px;
 }
 
-.product {
+.property {
 	background-color: #f6f6f6;
 	position: relative;
 	border-radius: 4px;
 	min-height: 250px;
 }
 
-.product-image {
+.property-image {
 	background-color: #f6f6f6;
 	background-size: auto 90% ;
 	background-repeat: no-repeat;
