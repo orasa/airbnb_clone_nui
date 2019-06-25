@@ -6,13 +6,19 @@ require('dotenv').config()
 
 // API
 
+app.get('api/propterties', require('./controllers/properties_get'))
 
 
 
 
+//Static Files
+//Serve every file inside "client" folder as static
+app.use(express.static(path.join(__dirname, 'client')))
 
-
-
+app.get('./', (reg, res) => {
+	res.sendFile(path.join(__dirname, 'client/properties.html'))
+	console.log('__dirname', __dirname);
+})
 
 
 
