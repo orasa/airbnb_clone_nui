@@ -14,25 +14,27 @@ body {
 #container {
 	display: grid;
 	/* grid-template-columns: 1fr 4fr; */
-  grid-template-columns: 1fr 4fr;
-  margin-top: 50px;
+  grid-template-columns: 1fr 5fr;
+  margin-top: 10px;
   /* background-color: red; */
 }
 
-#properties {
-	padding-top: 20px;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-column-gap: 10px;
-	grid-row-gap: 5px;
-}
-#sidebar {
+
+/* #sidebar {
   display: inline-grid;
   background-color: grey;
   widht: 50px;
-}
+} */
 
 /* Style the header */
+div.header {
+	background-color: #f6f6f6;
+  background-size: auto 90%;
+  background-repeat: no-repeat;
+  background-position: center 15px;
+  height: 200px;
+
+}
 #header {
 	background-color: #ccc;
 
@@ -41,10 +43,12 @@ body {
   /* display: block; */
   background-repeat: no-repeat;
   width: auto;
-  heigt: 200px;
+  heigt: 50px;
   /* to make background image only on the top of pa */
-  background-size: 100% auto;
-  padding-top: 500px; /* hep render the whole heigth*/
+  background-size: 80% 80% 50% 90%;
+  padding-top: 350px; /* heLp render the whole heigth*/
+	padding-bottom: 100px;
+	margin-bottom: 5px;
   text-align: center;
   font-size: 35px; */ */
 
@@ -84,17 +88,30 @@ nav ul  li {
 }
 nav ul  li  a{
 
-	color: blue;
+	color: #f6f6f6;
 	text-decoration: none;
 
 }
 
 .search_bar {
+	width: auto;
+	height: 100px;
+	background-color: pink;
+	border-color: black;
+	border-size; 1px;
 
+}
+#properties {
+	padding-top: 10px;
+	margin-top: 5px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-column-gap: 5px;
+	grid-row-gap: 5px;
 }
 
 .property {
-  width: 175px;
+  width: auto;
   heigth: 300;
   margin: 5px;
 	background-color: none;

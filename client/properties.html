@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>airbnb clone project</title>
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/sidebar.css">
 		<script src="/js/axios.min.js"></script>
 		<script src="/js/script.js"></script>
   </head>
@@ -20,18 +21,10 @@
               <li><a href="#">Become a host</a></li>
               <li><a href="#">Sign Up</a></li>
               <li><a href="#">Log In</a></li>
-              <li><a href="#">San Francisco</a></li>
+
             </ul>
 
         </header>
-          <!-- <nav>
-            <ul>
-              <li><a href="#">Help</a></li>
-              <li><a href="#">Become a host</a></li>
-              <li><a href="#">Sign Up</a></li>
-              <li><a href="#">Log In</a></li>
-              <li><a href="#">San Francisco</a></li>
-            </ul> -->
 
 
         </div> <!-- End top_nav  -->
@@ -42,11 +35,23 @@
      <!-- end serach bar -->
 
         <div id="container">
+          <div id="sidebar">
+            <ul>
+              <h5>Search by Locations</h5>
+              <a href="#">
+                <li>England</li>
+                <li>Thailand</li>
+                <li>United states</li>
+                <li>France</li>
+              </a>
+
+            </ul>
+
+          </div>
 
           <div id="properties">
 
          </div> <!-- END OF PROPERTIES  -->
-
 
         <!-- <footer>
           <p>Footer</p>
@@ -56,24 +61,3 @@
 
   </body>
 </html>
-
-
-
-<div class="property">
-
-   <div class="gallery">
-     <div class="property-image" style="background-image: url('../img/${p.image}')">
-
-      </div>
-       </div>
-
-        <div class="description">
-          <h5>${p.name}</h5>
-          <small>${p.description}</small>
-        </div>
-
-       <div class="price">
-        <span>$${p.price}</span>
-        <a href="#" class="button">Book now</a>
-       </div>
-     </div>
