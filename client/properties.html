@@ -8,34 +8,72 @@
 		<script src="/js/axios.min.js"></script>
 		<script src="/js/script.js"></script>
   </head>
-  <body>
 
-    <div id="wrap">
-      <div id="header">
-              <h1>HEADER h1</h1>
+    <body>
+      <div id="wraper">
+        <h3>I am a wraper</h3>
 
-              <hr>
-              <hr>
-
-          </div>
-      <div id="container">
-        <div id="sidebar">
-          <div id="nav">
-            <h1>Place to stay around the world</h1>
+        <div id="header">
+          <nav>
             <ul>
+              <li><a href="#">Help</a></li>
+              <li><a href="#">Become a host</a></li>
+              <li><a href="#">Sign Up</a></li>
+              <li><a href="#">Log In</a></li>
+              <li><a href="#">San Francisco</a></li>
             </ul>
-          </div>
 
-        <div id="properties">
+        </header>
+          <!-- <nav>
+            <ul>
+              <li><a href="#">Help</a></li>
+              <li><a href="#">Become a host</a></li>
+              <li><a href="#">Sign Up</a></li>
+              <li><a href="#">Log In</a></li>
+              <li><a href="#">San Francisco</a></li>
+            </ul> -->
 
+
+        </div> <!-- End top_nav  -->
+
+        <div class="search_bar">
         </div>
 
-      </div>
+     <!-- end serach bar -->
+
+        <div id="container">
+
+          <div id="properties">
+
+         </div> <!-- END OF PROPERTIES  -->
+
+
+        <!-- <footer>
+          <p>Footer</p>
+        </footer> -->
+      </div> <!-- End container  -->
     </div>
-
-
-  </div>
-
 
   </body>
 </html>
+
+
+
+<div class="property">
+
+   <div class="gallery">
+     <div class="property-image" style="background-image: url('../img/${p.image}')">
+
+      </div>
+       </div>
+
+        <div class="description">
+          <h5>${p.name}</h5>
+          <small>${p.description}</small>
+        </div>
+
+       <div class="price">
+        <span>$${p.price}</span>
+        <a href="#" class="button">Book now</a>
+       </div>
+     </div>

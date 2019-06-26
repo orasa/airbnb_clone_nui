@@ -1,113 +1,144 @@
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-	margin: 0;
-	padding: 30px;
-	background: black;
-	font-family: Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
-#wrap {
-	background-color: white;
-	padding-bottom:  30px;
-	padding-top: 10px;
-	margin-top:10px;
-	border-radius: 15px;
-	box-shadow: 0 5px 20px rgba(0,0,0,.15);
-	 min-height: 500px; 
+#wraper {
+  background-color: white;
 
 }
 
-
-.container {
+#container {
 	display: grid;
-  grid-template-columns: 200px auto;
-	background-color: red;
+	/* grid-template-columns: 1fr 4fr; */
+  grid-template-columns: 1fr 4fr;
+  margin-top: 50px;
+  /* background-color: red; */
 }
-
-
-div.header {
-	display: grid;
-	background-color: lightpink;
-	grid-template-columns: 1fr;
-}
-
-.header {
-	display: grid;
-	grid-template-columns: 1fr;
-	background-size: auto 90%;
-  color: blue;
-	background-color: grey;
-  font-size:  30px;
-	width: auto 90%;
-}
-
-
-
-#sidebar {
-
-}
-
-h1 {
-	font-size: 20px;
-	margin-bottom: 50px;
-}
-
-
 
 #properties {
+	padding-top: 20px;
 	display: grid;
-	height: 250px;
-	margin-top: 10px;
-	margin-right: 200px;
-	background-color: red;
-
-	grid-template-columns:  1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-column-gap: 10px;
-	grid-row-gap:10px;
+	grid-row-gap: 5px;
+}
+#sidebar {
+  display: inline-grid;
+  background-color: grey;
+  widht: 50px;
 }
 
-.property {
-	display: grid;
-	border-color: pink;
-	grid-template-columns:  1fr 1fr 1fr 1fr;
-	heigth: 300px;
-}
+/* Style the header */
+#header {
+	background-color: #ccc;
 
-
-
-.product-image {
-	display: grid;
-	background-size: cover;
-	background-repeat: no-repeat;
-	margin-top: 10px;
-	padding-left:20px;
-
-	height: 200px;
-	width:280px; */
-
+  background-image: url('https://res.cloudinary.com/dp4hacqvs/image/upload/v1561442939/tropicalVilla_iyw5gl.jpg');
+  /* background-position: bottom;
+  /* display: block; */
+  background-repeat: no-repeat;
+  width: auto;
+  heigt: 200px;
+  /* to make background image only on the top of pa */
+  background-size: 100% auto;
+  padding-top: 500px; /* hep render the whole heigth*/
+  text-align: center;
+  font-size: 35px; */ */
 
 }
+ /* div.top_nav {
+   float: left;
+   margine-bottom: 10px;
+   margin-top:500px;
+  width: 30%;
+  display: inline;
+ } */
 
-div.gallery {
-margin: 5px;
-border: 1px solid #ccc;
-float: left;
-width: 300px;
-}
-div.gallery:hover {
-border: 1px solid #777;
-}
-
-div.product-image {
-	border: 1px solid #ccc;
-	border: 5px;
+/* Create two columns/boxes that floats next to each other */
+nav {
+  display: inline;
+  height:
+  float: left;
+  width: 30%;
+  height: 100px;
+  background: none;
+  padding: 20px;
 	position: relative;
 
 }
+/* Style the list inside the menu */
+nav ul {
+display: inline;
+padding-bottom: 0;
 
-/* div.gallery img {
-  width: 100%;
+}
+
+nav ul  li {
+  list-style-type: none;
+  display: inline;
+  font-size: 20px;
+  padding: 0;
+}
+nav ul  li  a{
+
+	color: blue;
+	text-decoration: none;
+
+}
+
+.search_bar {
+
+}
+
+.property {
+  width: 175px;
+  heigth: 300;
+  margin: 5px;
+	background-color: none;
+}
+
+
+.property-image {
+	background-color: #f6f6f6;
+	background-size: auto 90% ;
+	background-repeat: no-repeat;
+	background-position: center 15px;
+	height: 200px;
+}
+
+/* space holder for all description */
+div.descriptionBox {
+padding-left: 10px;
+margin: 1px;
+background-color: lightblue;
+text-align: left;
+width: 175px;
+height: auto;
+}
+
+.description {
   height: auto;
-  padding: 5px;
-} */
-* {
-  box-sizing: border-box;
+	padding-left; 5px;
+	margin-left: 5px; /*move the inner text */
+}
+
+
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
 }
