@@ -1,22 +1,48 @@
 body {
 	margin: 0;
 	padding: 30px;
-	background: #f0f0f0;
+	background: black;
 	font-family: Helvetica, sans-serif;
 }
-
-#header {
-  color: blue;
-  font-size:  30px;
-  text-align: center;
-}
-
 #wrap {
 	background-color: white;
-	padding: 50px;
+	padding-bottom:  30px;
+	padding-top: 10px;
+	margin-top:10px;
 	border-radius: 15px;
 	box-shadow: 0 5px 20px rgba(0,0,0,.15);
-	min-height: 400px;
+	 min-height: 500px; 
+
+}
+
+
+.container {
+	display: grid;
+  grid-template-columns: 200px auto;
+	background-color: red;
+}
+
+
+div.header {
+	display: grid;
+	background-color: lightpink;
+	grid-template-columns: 1fr;
+}
+
+.header {
+	display: grid;
+	grid-template-columns: 1fr;
+	background-size: auto 90%;
+  color: blue;
+	background-color: grey;
+  font-size:  30px;
+	width: auto 90%;
+}
+
+
+
+#sidebar {
+
 }
 
 h1 {
@@ -24,30 +50,64 @@ h1 {
 	margin-bottom: 50px;
 }
 
-#container {
-	display: grid;
-	grid-template-columns: 200px auto;
-}
+
 
 #properties {
-	padding-top: 90px;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-column-gap: 40px;
-	grid-row-gap: 40px;
+	height: 250px;
+	margin-top: 10px;
+	margin-right: 200px;
+	background-color: red;
+
+	grid-template-columns:  1fr 1fr 1fr 1fr 1fr;
+	grid-column-gap: 10px;
+	grid-row-gap:10px;
 }
 
 .property {
-	background-color: #f6f6f6;
-	position: relative;
-	border-radius: 4px;
-	min-height: 250px;
+	display: grid;
+	border-color: pink;
+	grid-template-columns:  1fr 1fr 1fr 1fr;
+	heigth: 300px;
 }
 
-.property-image {
-	background-color: #f6f6f6;
-	background-size: auto 90% ;
+
+
+.product-image {
+	display: grid;
+	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: center 15px;
+	margin-top: 10px;
+	padding-left:20px;
+
 	height: 200px;
+	width:280px; */
+
+
+}
+
+div.gallery {
+margin: 5px;
+border: 1px solid #ccc;
+float: left;
+width: 300px;
+}
+div.gallery:hover {
+border: 1px solid #777;
+}
+
+div.product-image {
+	border: 1px solid #ccc;
+	border: 5px;
+	position: relative;
+
+}
+
+/* div.gallery img {
+  width: 100%;
+  height: auto;
+  padding: 5px;
+} */
+* {
+  box-sizing: border-box;
 }
