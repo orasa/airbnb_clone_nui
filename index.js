@@ -22,6 +22,8 @@ const app = express()
 //Serve every file inside "client" folder as static
 
 app.get('/api/properties', require('./controllers/properties_get'))
+app.get('/api/countries', require('./controllers/countries_get'))
+// app.get('/api/propertiesX', require('./controllers/properties_getX'))
 
 
 app.get('/', (req, res) => {
