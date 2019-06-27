@@ -56,6 +56,8 @@ window.onload = () => {
 	document.addEventListener('click', (c) => {
 		console.log('c.target.id from addEventL',c.target.id);
 		if (c.target.classList.contains('country')) {
+
+			//
 			axios.get(`http://localhost:3000/api/properties?country=${c.target.id}`).then((res) => {
 				console.log('res from click', res.data)
 				let properties = res.data
@@ -72,15 +74,15 @@ window.onload = () => {
 								 <div class="property-image" style="background-image: url('${p.image}')">
 						      </div>
 						        <div class="description">
-						          <h5>${p.name}</h5>
-						          <small>${p.description}</small>
+						          <h5>Name:${p.name}</h5>
+						          <small>Description:${p.description}</small>
 						        </div>
 										<div class="type">
 
-						          <small>${p.type}</small>
+						          <small>type:${p.type}</small>
 						        </div>
 						       <div class="price">
-						        <span>${p.price}</span>
+						        <span>$${p.price}</span>
 						        <a href="#" class="button"><h5>Book now<h5></a>
 						       </div>
 						 </div>
