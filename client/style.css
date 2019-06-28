@@ -35,6 +35,12 @@ div.header {
   height: 200px;
 
 }
+//logo
+img {
+     position: absolute;
+     top:  100px;
+     left: 20px;
+}
 #header {
 	background-color: #ccc;
 

@@ -18,8 +18,6 @@ window.onload = () => {
 		})
 	})
 
-
-
   // axios.get('api/types'.then(res) => {   //target something
 	// })
 //CONNECT TO LOCALHOST
@@ -36,11 +34,11 @@ window.onload = () => {
 					 <div class="property-image" style="background-image: url('${p.image}')">
 			      </div>
 			        <div class="description">
-			          <h5>${p.name}</h5>
-			          <small>${p.description}</small>
+			          <h6>${p.name}</h6>
+			          <h6>${p.description}</h6>
 			        </div>
 			       <div class="price">
-			        <span>$${p.price}</span>
+			        <p>$${p.price}</p>
 			        <a href="#" class="button"><h5>Book now<h5></a>
 			       </div>
 			 </div>
@@ -78,7 +76,6 @@ window.onload = () => {
 						          <small>Description:${p.description}</small>
 						        </div>
 										<div class="type">
-
 						          <small>type:${p.type}</small>
 						        </div>
 						       <div class="price">

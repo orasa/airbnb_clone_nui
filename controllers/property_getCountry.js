@@ -2,17 +2,14 @@ const db = require('../db.js')
 
 module.exports = (req, res) => {
 
-let query = `SELECT properties.id, properties.name,
-properties.price,
-types.name As "type",
-countries.name As "country"
-FROM properties `
+let query = `SELECT
+FROM properties
 
-`LEFT JOIN countries ON properties.country = countries.id `
+`LEFT JOIN countries ON properties.country = countries.id
 `LEFT JOIN country
-ON properties.country = country.id `
+ON properties.country = country.id
 
-`LEFT JOIN type
+LEFT JOIN type
 ON properties.type = type.id `
 
 	if (req.query && Object.keys(req.query).length) { // add WHERE if request has query

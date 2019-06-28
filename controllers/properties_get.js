@@ -24,6 +24,10 @@ if (req.query.country) {
 
 	}
 
+	if (req.query.type) {
+		query += ` WHERE country = ${req.query.type}`
+	}
+
 console.log(query);
 
 	db.query(query, (err, result) => {
