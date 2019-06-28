@@ -1,22 +1,59 @@
 window.onload = () => {
 
- //get
+
+// get all types
+	axios.get('http://localhost:3000/api/types').then((res) => {
+
+		// target ul inside sidebar
+		let type_ui = document.getElementById('type').getElementsByTagName('ul')[0]
+		// define counries
+		let types = res.data
+		console.log(res.data)
+		// display each category in the DOM
+		types.forEach((t) => {
+			type_ui.insertAdjacentHTML('beforeEnd', `
+				<li>
+					<a href="#" class="country" id="${t.id}">${t.name}</a>
+				</li>
+			`)
+		})
+	})
+
+ //get all countries
 	axios.get('http://localhost:3000/api/countries').then((res) => {
 
 		// target ul inside sidebar
-		let ul = document.getElementById('sidebar').getElementsByTagName('ul')[0]
+		let locations_ui = document.getElementById('country').getElementsByTagName('ul')[0]
 		// define counries
 		let countries = res.data
-		console.log(res.data);
+		console.log(res.data)
 		// display each category in the DOM
 		countries.forEach((c) => {
-			ul.insertAdjacentHTML('beforeEnd', `
+			locations_ui.insertAdjacentHTML('beforeEnd', `
 				<li>
 					<a href="#" class="country" id="${c.id}">${c.name}</a>
 				</li>
 			`)
 		})
 	})
+
+	// axios.get('http://localhost:3000/api/properties').then((res) => {
+	//
+	// 	// target ul inside sidebar
+	// 	let types_ui = document.getElementById('sidebar').getElementsByTagName('ul')[0]
+	// 	// define counries
+	// 	let countries = res.data
+	// 	console.log(res.data)
+	// 	// display each category in the DOM
+	// 	countries.forEach((c) => {
+	// 		types_ui.insertAdjacentHTML('beforeEnd', `
+	// 			<li>
+	// 				<a href="#" class="country" id="${c.id}">${c.name}</a>
+	// 			</li>
+	// 		`)
+	// 	})
+	// })
+
 
   // axios.get('api/types'.then(res) => {   //target something
 	// })

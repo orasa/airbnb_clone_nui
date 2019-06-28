@@ -23,6 +23,7 @@ const app = express()
 
 app.get('/api/properties', require('./controllers/properties_get'))
 app.get('/api/countries', require('./controllers/countries_get'))
+app.get('/api/types', require('./controllers/types_get'))
 // app.get('/api/propertiesX', require('./controllers/properties_getX'))
 
 
@@ -30,6 +31,11 @@ app.get('/', (req, res) => {
  	res.sendFile(path.join(__dirname, '/client/properties.html'))
 	console.log('__dirname', __dirname);
 })
+
+// app.get('/', (req, res) => {
+//  	res.sendFile(path.join(__dirname, '/client/countriesList.html'))
+// 	console.log('__dirname', __dirname);
+// })
 
 app.use(express.static(path.join(__dirname, 'client')))
 
