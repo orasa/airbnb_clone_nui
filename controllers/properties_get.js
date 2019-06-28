@@ -21,8 +21,12 @@ ON properties.city = cities.id`
 
 if (req.query.country) {
 		query += ` WHERE country = ${req.query.country}`
-
 	}
+	if (req.query.type) {
+		query += ` WHERE type = ${req.query.type}`
+	}
+
+
 
 
 

@@ -1,7 +1,7 @@
 window.onload = () => {
 
 
-// get all types
+// get all types/ on api
 	axios.get('http://localhost:3000/api/types').then((res) => {
 
 		// target ul inside sidebar
@@ -90,6 +90,9 @@ window.onload = () => {
 	// when click c.target give us the id i.e click Thailand, has id = 1
 	document.addEventListener('click', (c) => {
 		console.log('c.target.id from addEventL',c.target.id);
+
+
+		// START HERE
 		if (c.target.classList.contains('country')) {
 
 			//
@@ -129,6 +132,51 @@ window.onload = () => {
 				console.log('err', err)
 			})
 		}
+		// END HERE
+		if (c.target.classList.contains('country')) {
+
+			//
+			axios.get(`http://localhost:3000/api/properties?country=${c.target.id}`).then((res) => {
+				console.log('res from click', res.data)
+				let properties = res.data
+				// target products
+				let properties_ui = document.getElementById('properties')
+
+				// clear the property
+				properties_ui.innerHTML = ''
+				if (res.data.length) {
+					// display each property in the DOM
+					properties.forEach((p) => {
+						properties_ui.insertAdjacentHTML('beforeEnd', `
+						<div class="property">
+								 <div class="property-image" style="background-image: url('${p.image}')">
+						      </div>
+						        <div class="description">
+						          <h5>Name:${p.name}</h5>
+						          <small>Description:${p.description}</small>
+						        </div>
+										<div class="type">
+						          <small>type:${p.type}</small>
+						        </div>
+						       <div class="price">
+						        <span>$${p.price}</span>
+						        <a href="#" class="button"><h5>Book now<h5></a>
+						       </div>
+						 </div>
+						`)
+					})
+				} else {
+					properties_ui.innerHTML = 'No Properties found.'
+				}
+			}).catch((err) => {
+				console.log('err', err)
+			})
+		}
+
+
+
+
+
 	})
 
 }
