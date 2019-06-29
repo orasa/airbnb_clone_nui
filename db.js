@@ -1,15 +1,15 @@
 // require package
 const {Client} = require('pg')
 
-// // create connection HERoKU
-// const db = new Client({
-// 	connectionString: process.env.DATABASE_URL
-// })
-
-// create connection with localhost
+ // create connection HEROKU
 const db = new Client({
-	connectionString: 'postgres://orasaoneal:@localhost:5432/airbnb_clone'
+	connectionString: process.env.DATABASE_URL
 })
+
+//  create connection with localhost
+// const db = new Client({
+// 	connectionString: 'postgres://orasaoneal:@localhost:5432/airbnb_clone'
+// })
 
 // connect to database
 db.connect((err) => {
