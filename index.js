@@ -2,7 +2,7 @@ const express = require('express')
 const path = require('path')
 const app = express()
 //future used
-// require('dotenv').config()
+require('dotenv').config()
 // // API
 //
 // app.get('/api/properties', require('./controllers/properties_get'))
