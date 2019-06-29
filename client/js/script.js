@@ -2,8 +2,8 @@ window.onload = () => {
 
 
 // get all types/ on api
-	//axios.get('http://localhost:3000/api/types').then((res) => {
-		axios.get('/api/types').then((res) => {
+
+	axios.get('/api/types').then((res) => {
 
 		// target ul inside sidebar
 		let type_ui = document.getElementById('type').getElementsByTagName('ul')[0]
@@ -20,7 +20,7 @@ window.onload = () => {
 		})
 	})
 
- //get all countries
+	//get all countries
 
 	axios.get('/api/countries').then((res) => {
 
