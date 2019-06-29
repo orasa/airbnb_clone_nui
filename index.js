@@ -43,8 +43,14 @@ app.use(express.static(path.join(__dirname, 'client')))
 
 
 
+
+//RUN SERVER WITH HEROKU
+app.listen(process.env.PORT, () => {
+  console.log(`Server listening on port ${process.env.PORT}`)
+})
+
 //Run Server LOCALHOST
 
-app.listen(3000, () => {
-	console.log(`Server Listening on port 3000`);
-})
+// app.listen(3000, () => {
+// 	console.log(`Server Listening on port 3000`);
+// })
