@@ -2,7 +2,8 @@ window.onload = () => {
 
 
 // get all types/ on api
-	axios.get('http://localhost:3000/api/types').then((res) => {
+	//axios.get('http://localhost:3000/api/types').then((res) => {
+		axios.get(/api/types').then((res) => {
 
 		// target ul inside sidebar
 		let type_ui = document.getElementById('type').getElementsByTagName('ul')[0]
@@ -20,7 +21,8 @@ window.onload = () => {
 	})
 
  //get all countries
-	axios.get('http://localhost:3000/api/countries').then((res) => {
+	
+	axios.get('/api/countries').then((res) => {
 
 		// target ul inside sidebar
 		let locations_ui = document.getElementById('country').getElementsByTagName('ul')[0]
@@ -96,7 +98,7 @@ window.onload = () => {
 		if (c.target.classList.contains('country')) {
 
 			//
-			axios.get(`http://localhost:3000/api/properties?country=${c.target.id}`).then((res) => {
+			axios.get(`/api/properties?country=${c.target.id}`).then((res) => {
 				console.log('res from click', res.data)
 				let properties = res.data
 				// target products
@@ -136,7 +138,7 @@ window.onload = () => {
 		if (c.target.classList.contains('country')) {
 
 			//
-			axios.get(`http://localhost:3000/api/properties?country=${c.target.id}`).then((res) => {
+			axios.get(`/api/properties?country=${c.target.id}`).then((res) => {
 				console.log('res from click', res.data)
 				let properties = res.data
 				// target products
