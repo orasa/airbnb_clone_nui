@@ -45,7 +45,7 @@ img {
 	background-color: #ccc;
 
   background-image: url('https://res.cloudinary.com/dp4hacqvs/image/upload/v1561442939/tropicalVilla_iyw5gl.jpg');
-  /* background-position: bottom;
+  /* background-position: bottom; */
   /* display: block; */
   background-repeat: no-repeat;
   width: auto;
@@ -54,8 +54,8 @@ img {
   /* background-size: 80% 80% 50% 90%; */
   background-size: cover;
   padding-top: 350px; /* heLp render the whole heigth*/
-	padding-bottom: 100px;
-	margin-bottom: 5px;
+	padding-bottom: 90%;
+	margin-bottom: 50px;
   text-align: center;
   font-size: 35px; */ */
 
