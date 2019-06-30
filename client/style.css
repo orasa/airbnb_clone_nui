@@ -20,11 +20,11 @@ body {
 }
 
 
-/* #sidebar {
+#sidebar {
   display: inline-grid;
   background-color: grey;
-  widht: 50px;
-} */
+  widht: auto;
+}
 
 /* Style the header */
 div.header {
@@ -38,23 +38,21 @@ div.header {
 //logo
 img {
      position: absolute;
-     top:  100px;
+     top:  10%;
      left: 20px;
+     padding-top 20px;
 }
 #header {
-	background-color: #ccc;
 
-  background-image: url('https://res.cloudinary.com/dp4hacqvs/image/upload/v1561442939/tropicalVilla_iyw5gl.jpg');
-  /* background-position: bottom; */
-  /* display: block; */
+  background-image: url('https://res.cloudinary.com/dp4hacqvs/image/upload/v1561892244/pai_in2uej.jpg');
   background-repeat: no-repeat;
   width: auto;
-  heigt: 50px;
+  heigt: 30px;
   /* to make background image only on the top of pa */
-  /* background-size: 80% 80% 50% 90%; */
+
   background-size: cover;
-  padding-top: 350px; /* heLp render the whole heigth*/
-	padding-bottom: 50%;
+  padding-top: 20%; /* heLp render the whole heigth*/
+	padding-bottom: 15%;
 	margin-bottom: 50px;
   text-align: center;
   font-size: 35px; */ */
@@ -71,7 +69,7 @@ img {
 /* Create two columns/boxes that floats next to each other */
 nav {
   display: inline;
-  height:
+  height: auto;
   float: left;
   width: 30%;
   height: 100px;

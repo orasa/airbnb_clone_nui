@@ -8,13 +8,13 @@ window.onload = () => {
 		// target ul inside sidebar
 		let type_ui = document.getElementById('type').getElementsByTagName('ul')[0]
 		// define counries
-		let types_data = res.data
+		let types = res.data
 		console.log(res.data)
 		// display each category in the DOM
-		types_data.forEach((t) => {
+		types.forEach((t) => {
 			type_ui.insertAdjacentHTML('beforeEnd', `
 				<li>
-					<a href="#" class="type" id="${t.id}">${t.name}</a>
+					<a href="#" class="country" id="${t.id}">${t.name}</a>
 				</li>
 			`)
 		})
@@ -39,7 +39,7 @@ window.onload = () => {
 		})
 	})
 
-
+	
 
 //CONNECT TO LOCALHOST
 //show all properties
@@ -60,9 +60,6 @@ window.onload = () => {
 			          <h6>${p.name}</h6>
 			          <h6>${p.description}</h6>
 			        </div>
-							<div class="type">
-								<small>type:${p.type}</small>
-							</div>
 			       <div class="price">
 			        <p>$${p.price}</p>
 			        <a href="#" class="button"><h5>Book now<h5></a>
@@ -88,7 +85,7 @@ window.onload = () => {
 
 			//
 			axios.get(`/api/properties?country=${c.target.id}`).then((res) => {
-				console.log('res from click on country', res.data)
+				console.log('res from click', res.data)
 				let properties = res.data
 				// target products
 				let properties_ui = document.getElementById('properties')
@@ -126,23 +123,22 @@ window.onload = () => {
 
 		// END HERE
 
-		// Api End Point: types : click type get properties in that type need to be fixed
+		// click type need to be fixed
 		if (c.target.classList.contains('type')) {
-			//FROM properties table get the type
+
+			//
 			axios.get(`/api/properties?type=${c.target.id}`).then((res) => {
-				console.log('res from click  on type', res.data)
+				console.log('res from click', res.data)
 				let types = res.data
 				// target products
-				let types_ui = document.getElementById('type')
-				let properties_ui = document.getElementById('properties')
+				let properties_ui = document.getElementById('type')
 
 				// clear the property
 				properties_ui.innerHTML = ''
-				types_ui.innerHTML = ''
 				if (res.data.length) {
-					// display each type in the DOM
-					types.forEach((t) => {
-						types_ui.insertAdjacentHTML('beforeEnd', `
+					// display each property in the DOM
+					property_type.forEach((t) => {
+						properties_ui.insertAdjacentHTML('beforeEnd', `
 						<div class="property">
 								 <div class="property-image" style="background-image: url('${t.image}')">
 						      </div>
@@ -161,7 +157,7 @@ window.onload = () => {
 						`)
 					})
 				} else {
-					types_ui.innerHTML = 'No Properties found.'
+					properties_ui.innerHTML = 'No Properties found.'
 				}
 			}).catch((err) => {
 				console.log('err', err)
