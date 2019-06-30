@@ -16,7 +16,7 @@ body {
 	/* grid-template-columns: 1fr 4fr; */
   grid-template-columns: 1fr 4fr;
   margin-top: 10px;
-  /* background-color: red; */
+
 }
 
 
@@ -51,7 +51,8 @@ img {
   width: auto;
   heigt: 50px;
   /* to make background image only on the top of pa */
-  background-size: 80% 80% 50% 90%;
+  /* background-size: 80% 80% 50% 90%; */
+  background-size: cover;
   padding-top: 350px; /* heLp render the whole heigth*/
 	padding-bottom: 100px;
 	margin-bottom: 5px;
